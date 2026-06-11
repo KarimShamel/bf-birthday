@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday My Love ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ============================================================
+       CURTAIN SCENE (Opening)
+  ============================================================ -->
+  <div id="curtain-scene">
+    <canvas id="sparkle-canvas"></canvas>
+    <div id="curtain-left"  class="curtain-panel"></div>
+    <div id="curtain-right" class="curtain-panel"></div>
+
+    <div id="curtain-text">
+      <p class="curtain-subtitle">A love letter just for you</p>
+      <h1 class="curtain-title">Happy Birthday<br/>My Love <span class="heart-emoji">❤️</span></h1>
+      <button id="open-btn">Open My Surprise</button>
+    </div>
+
+    <!-- confetti canvas sits above curtain panels -->
+    <canvas id="confetti-canvas"></canvas>
+  </div>
+
+  <!-- ============================================================
+       MAIN EXPERIENCE
+  ============================================================ -->
+  <main id="main-experience" class="hidden">
+
+    <!-- Floating particles background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- ── HERO ────────────────────────────────────────────────── -->
+    <section id="hero">
+      <div id="hero-bg"></div>
+      <div id="three-container"></div>
+
+      <div id="hero-text">
+        <span class="hero-eyebrow">Today is all about you</span>
+        <h1 class="hero-title">Happy Birthday,<br/>My Love <span>❤️</span></h1>
+        <p class="hero-message">
+          Every day with you is a gift I never knew I deserved.
+          Today, on your birthday, I want the whole world to know
+          how deeply, completely, endlessly I love you.
+        </p>
+        <a href="#timeline" class="scroll-cta">Scroll through our story ↓</a>
+      </div>
+    </section>
+
+    <!-- ── TIMELINE ───────────────────────────────────────────── -->
+    <section id="timeline">
+      <div class="section-header">
+        <span class="section-label">Our Journey</span>
+        <h2>A Love Story, Chapter by Chapter</h2>
+      </div>
+      <div class="timeline-track">
+
+        <div class="tl-item" data-aos>
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <img src="photos/photo1.jpg" alt="First Meeting" onerror="this.style.background='linear-gradient(135deg,#f9a8d4,#fce7f3)'; this.removeAttribute('src')" />
+            <div class="tl-body">
+              <span class="tl-date">The Beginning</span>
+              <h3>The Moment I Saw You</h3>
+              <p>The universe rearranged itself the instant our eyes met. I knew, somehow, that everything was about to change.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item" data-aos>
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <img src="photos/photo2.jpg" alt="First Date" onerror="this.style.background='linear-gradient(135deg,#fde68a,#fef3c7)'; this.removeAttribute('src')" />
+            <div class="tl-body">
+              <span class="tl-date">Our First Date</span>
+              <h3>The Night I Fell For You</h3>
+              <p>Nervous laughs, lingering glances, and a walk that neither of us wanted to end. You made everything feel easy.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item" data-aos>
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <img src="photos/photo3.jpg" alt="Favorite Memory" onerror="this.style.background='linear-gradient(135deg,#a5b4fc,#ede9fe)'; this.removeAttribute('src')" />
+            <div class="tl-body">
+              <span class="tl-date">My Favourite Memory</span>
+              <h3>A Moment Frozen in Time</h3>
+              <p>Of all the memories we've made, this one lives rent-free in my heart. I replay it constantly and smile every time.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item" data-aos>
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <img src="photos/photo4.jpg" alt="First Trip" onerror="this.style.background='linear-gradient(135deg,#6ee7b7,#d1fae5)'; this.removeAttribute('src')" />
+            <div class="tl-body">
+              <span class="tl-date">Our Adventure</span>
+              <h3>Our First Trip Together</h3>
+              <p>New places feel like home when I'm exploring them with you. Every road trip, every adventure — better because of you.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item" data-aos>
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <img src="photos/photo5.jpg" alt="Today" onerror="this.style.background='linear-gradient(135deg,#f9a8d4,#fbcfe8)'; this.removeAttribute('src')" />
+            <div class="tl-body">
+              <span class="tl-date">Today ❤️</span>
+              <h3>Your Birthday</h3>
+              <p>And here we are — still choosing each other every single day. Happy Birthday, my love. This is just the beginning.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── GALLERY ────────────────────────────────────────────── -->
+    <section id="gallery">
+      <div class="section-header">
+        <span class="section-label">Our Memories</span>
+        <h2>Moments I Never Want to Forget</h2>
+      </div>
+      <div id="masonry-grid">
+        <!-- Populated by script.js -->
+      </div>
+
+      <!-- Lightbox -->
+      <div id="lightbox" class="hidden">
+        <button id="lb-close">✕</button>
+        <button id="lb-prev">‹</button>
+        <img id="lb-img" src="" alt="Memory" />
+        <button id="lb-next">›</button>
+        <span id="lb-counter"></span>
+      </div>
+    </section>
+
+    <!-- ── REASONS ─────────────────────────────────────────────── -->
+    <section id="reasons">
+      <div class="section-header">
+        <span class="section-label">From My Heart</span>
+        <h2>20 Reasons I Love You</h2>
+      </div>
+      <div id="reasons-grid">
+        <!-- Populated by script.js -->
+      </div>
+    </section>
+
+    <!-- ── LOVE LETTER ─────────────────────────────────────────── -->
+    <section id="letter-section">
+      <div class="section-header">
+        <span class="section-label">For Your Eyes Only</span>
+        <h2>A Letter From My Heart</h2>
+      </div>
+      <div id="envelope-wrap">
+        <div id="envelope" class="closed">
+          <div class="env-flap"></div>
+          <div class="env-body">
+            <div class="env-seal">❤️</div>
+          </div>
+          <div id="letter">
+            <p id="letter-text"></p>
+          </div>
+        </div>
+        <p class="env-hint">Click the envelope to open ❤️</p>
+      </div>
+    </section>
+
+    <!-- ── HEART GARDEN ────────────────────────────────────────── -->
+    <section id="heart-garden">
+      <div class="section-header">
+        <span class="section-label">Plant Your Love</span>
+        <h2>Click Anywhere to Grow Hearts</h2>
+      </div>
+      <div id="garden-area">
+        <p class="garden-hint">Tap or click anywhere in this space 💗</p>
+      </div>
+    </section>
+
+    <!-- ── WISHES WALL ─────────────────────────────────────────── -->
+    <section id="wishes-wall">
+      <div class="section-header">
+        <span class="section-label">Birthday Wishes</span>
+        <h2>Messages Floating Just for You</h2>
+      </div>
+      <div id="bubbles-container">
+        <!-- Populated by script.js -->
+      </div>
+    </section>
+
+    <!-- ── 3D HEART SHOWCASE ──────────────────────────────────── -->
+    <section id="heart-showcase">
+      <div class="section-header light">
+        <span class="section-label">With All My Love</span>
+        <h2>My Heart Beats for You</h2>
+      </div>
+      <div id="showcase-three"></div>
+      <p class="showcase-hint">Drag to orbit · Scroll to zoom</p>
+    </section>
+
+    <!-- ── SECRET MESSAGE ─────────────────────────────────────── -->
+    <section id="secret-section">
+      <div class="section-header">
+        <span class="section-label">Unlock Our Secret</span>
+        <h2>A Hidden Message Awaits</h2>
+      </div>
+      <div id="lock-screen">
+        <div class="lock-icon">🔒</div>
+        <p>What is our special date? <em>(format: DD/MM/YYYY)</em></p>
+        <div class="lock-input-row">
+          <input type="text" id="secret-input" placeholder="e.g. 14/02/2023" maxlength="10" />
+          <button id="secret-btn">Unlock</button>
+        </div>
+        <p id="secret-error" class="hidden">Not quite — try again 💭</p>
+      </div>
+      <div id="secret-reveal" class="hidden">
+        <div class="secret-animation">💫</div>
+        <h3>You remembered! ❤️</h3>
+        <p class="secret-msg">
+          On that very first day, I made a silent promise to myself —
+          to always be there for you, to make you laugh, to hold your hand
+          through every storm. That promise still stands. Forever and always.
+        </p>
+        <div id="secret-photos">
+          <!-- Populated by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ── MINI GAME ───────────────────────────────────────────── -->
+    <section id="game-section">
+      <div class="section-header">
+        <span class="section-label">A Little Fun</span>
+        <h2>Catch My Love ❤️</h2>
+      </div>
+      <div id="game-wrapper">
+        <div id="game-hud">
+          <span>❤️ <span id="game-score">0</span></span>
+          <span>💔 Lives: <span id="game-lives">3</span></span>
+          <span>⏱ <span id="game-timer">60</span>s</span>
+        </div>
+        <div id="game-progress-bar"><div id="game-progress-fill"></div></div>
+        <canvas id="game-canvas"></canvas>
+        <div id="game-overlay">
+          <h3>Ready to catch all my love?</h3>
+          <p>Move the basket with your mouse (or finger on mobile).</p>
+          <button id="game-start-btn">Start Game 💗</button>
+        </div>
+        <div id="game-win" class="hidden">
+          <h2>You Caught All My Love ❤️</h2>
+          <p>Just like you've caught my heart — completely and forever.</p>
+          <button id="game-replay-btn">Play Again</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── GRAND FINALE ────────────────────────────────────────── -->
+    <section id="finale">
+      <canvas id="fireworks-canvas"></canvas>
+      <div id="finale-three"></div>
+      <div id="finale-text">
+        <h1>Forever &amp; Always</h1>
+        <h2>❤️</h2>
+        <p>No matter where life takes us, my love for you will never waver. Happy Birthday, my everything.</p>
+        <button id="replay-btn">Replay Our Story 🔁</button>
+      </div>
+    </section>
+
+  </main><!-- /#main-experience -->
+
+  <!-- ── AUDIO ──────────────────────────────────────────────────── -->
+  <audio id="bg-music" src="music.mp3" loop preload="auto"></audio>
+
+  <!-- ── SCRIPTS ────────────────────────────────────────────────── -->
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
